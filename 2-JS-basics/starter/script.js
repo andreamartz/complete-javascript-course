@@ -252,88 +252,88 @@ After you have the sum of the array, divide it by the number of elements in it (
 GOOD LUCK 😀
 */
 
-var john = {
-  fullName: 'John Smith',
-  billAmounts: [124, 48, 268, 180, 42], 
-  tipAmounts: [], 
-  totalPaidAmounts: [],
-  calcTip: function() {
-    for (var i = 0; i < this.billAmounts.length; i++) {
-      // Determine tip percentage based on tipping rules
-      var tipPercentage;
-      var bill = this.billAmounts[i];
+// var john = {
+//   fullName: 'John Smith',
+//   billAmounts: [124, 48, 268, 180, 42], 
+//   tipAmounts: [], 
+//   totalPaidAmounts: [],
+//   calcTip: function() {
+//     for (var i = 0; i < this.billAmounts.length; i++) {
+//       // Determine tip percentage based on tipping rules
+//       var tipPercentage;
+//       var bill = this.billAmounts[i];
 
-      switch(true) {
-        case (bill < 50):
-          tipPercentage = .20;
-          break;
-        case (bill >= 50 && bill <= 200):
-          tipPercentage = .15;
-          break;
-        case (bill > 200):
-          tipPercentage = .10;
-          break;
-      }
-      // Add tip amounts and total paid amounts to their corresponding arrays
-      this.tipAmounts.push(this.billAmounts[i] * tipPercentage);
-      this.totalPaidAmounts.push(this.billAmounts[i] + this.tipAmounts[i]);                       
-    }
-  }
-};
+//       switch(true) {
+//         case (bill < 50):
+//           tipPercentage = .20;
+//           break;
+//         case (bill >= 50 && bill <= 200):
+//           tipPercentage = .15;
+//           break;
+//         case (bill > 200):
+//           tipPercentage = .10;
+//           break;
+//       }
+//       // Add tip amounts and total paid amounts to their corresponding arrays
+//       this.tipAmounts.push(this.billAmounts[i] * tipPercentage);
+//       this.totalPaidAmounts.push(this.billAmounts[i] + this.tipAmounts[i]);                       
+//     }
+//   }
+// };
 
-var mark = {
-  fullName: 'Mark Miller',
-  billAmounts: [77, 375, 110, 45],
-  tipAmounts: [],
-  totalPaidAmounts: [],
-  calcTip: function () {
-    for (var i = 0; i < this.billAmounts.length; i++) {
-      // Determine tip percentage based on tipping rules
-      var tipPercentage;
-      var bill = this.billAmounts[i];
+// var mark = {
+//   fullName: 'Mark Miller',
+//   billAmounts: [77, 375, 110, 45],
+//   tipAmounts: [],
+//   totalPaidAmounts: [],
+//   calcTip: function () {
+//     for (var i = 0; i < this.billAmounts.length; i++) {
+//       // Determine tip percentage based on tipping rules
+//       var tipPercentage;
+//       var bill = this.billAmounts[i];
 
-      switch (true) {
-        case (bill < 100):
-          tipPercentage = .20;
-          break;
-        case (bill >= 100 && bill <= 300):
-          tipPercentage = .10;
-          break;
-        case (bill > 300):
-          tipPercentage = .25;
-          break;
-      }
-      // Add tip amounts and total paid amounts to their corresponding arrays
-      this.tipAmounts.push(bill * tipPercentage);
-      this.totalPaidAmounts.push(bill + this.tipAmounts[i]);
-    }
-  }
-};
+//       switch (true) {
+//         case (bill < 100):
+//           tipPercentage = .20;
+//           break;
+//         case (bill >= 100 && bill <= 300):
+//           tipPercentage = .10;
+//           break;
+//         case (bill > 300):
+//           tipPercentage = .25;
+//           break;
+//       }
+//       // Add tip amounts and total paid amounts to their corresponding arrays
+//       this.tipAmounts.push(bill * tipPercentage);
+//       this.totalPaidAmounts.push(bill + this.tipAmounts[i]);
+//     }
+//   }
+// };
 
-function calcAvgTip(tips) {
-  var tipsSum = 0;
-  for (var i = 0; i < tips.length; i++) {
-    tipsSum += tips[i];
-  }
-  return tipsSum / tips.length;
-}
+// function calcAvgTip(tips) {
+//   var tipsSum = 0;
+//   for (var i = 0; i < tips.length; i++) {
+//     tipsSum += tips[i];
+//   }
+//   return tipsSum / tips.length;
+// }
 
-john.calcTip();
-mark.calcTip();
+// john.calcTip();
+// mark.calcTip();
 
-john.avgTip = calcAvgTip(john.tipAmounts);
-mark.avgTip = calcAvgTip(mark.tipAmounts);
+// john.avgTip = calcAvgTip(john.tipAmounts);
+// mark.avgTip = calcAvgTip(mark.tipAmounts);
 
-console.log(john, mark);
+// console.log(john, mark);
 
-function highTip() {
-  if (john.avgTip > mark.avgTip) {
-    console.log(john.fullName + '\'s family paid higher tip amounts on average ($' + john.avgTip + ') than ' + mark.fullName + '\'s family.');
-  } else if (mark.avgTip > john.avgTip) {
-    console.log(mark.fullName + '\'s family paid higher tip amounts on average ($' + mark.avgTip + ') than ' + john.fullName + '\'s family.');
-  } else {
-    console.log(mark.fullName + '\'s family and ' + john.fullName + '\'s family paid the same amount on average in tips ($' + markAvgTip + ').');
-  }
-}
+// function highTip() {
+//   if (john.avgTip > mark.avgTip) {
+//     console.log(john.fullName + '\'s family paid higher tip amounts on average ($' + john.avgTip + ') than ' + mark.fullName + '\'s family.');
+//   } else if (mark.avgTip > john.avgTip) {
+//     console.log(mark.fullName + '\'s family paid higher tip amounts on average ($' + mark.avgTip + ') than ' + john.fullName + '\'s family.');
+//   } else {
+//     console.log(mark.fullName + '\'s family and ' + john.fullName + '\'s family paid the same amount on average in tips ($' + markAvgTip + ').');
+//   }
+// }
 
-highTip();
+// highTip();
